@@ -1,0 +1,43 @@
+{
+  "name": "eco-s-4-commons",
+  "version": "0.0.0",
+  "description": "ECO Season 4 Common Overlays",
+  "homepage": "https://github.com/finncyr/eco-s-4-commons",
+  "author": {
+    "name": "finncyr",
+    "email": "fcyriax@web.de",
+    "url": "https://finncyr.dev"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "eco",
+    "esportscologne",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "Timer",
+        "width": 2,
+        "file": "panel.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "timer.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "private": true
+}
