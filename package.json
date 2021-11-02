@@ -24,7 +24,7 @@
     "dashboardPanels": [
       {
         "name": "panel",
-        "title": "Timer",
+        "title": "Caster Names",
         "width": 2,
         "file": "panel.html",
         "headerColor": "#525F78"
@@ -33,6 +33,11 @@
     "graphics": [
       {
         "file": "timer.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "hello-world.html",
         "width": 1920,
         "height": 1080
       }
