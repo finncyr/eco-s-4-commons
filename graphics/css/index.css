@@ -1,0 +1,99 @@
+html, body {
+    overflow: auto;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: Akkordeon;
+  src: url("../assets/Akkordeon-DEMO.otf") format("opentype");
+}
+
+.Overlay {
+    position: relative;
+    width: 100%;
+  
+    /*animation: fadein 2s;*/
+  }
+  
+  .team-left h2{
+    color: white;
+    font: 24px Akkordeon;
+    font-size: 80px;
+    position: absolute;
+    top: -79px;
+    left: 480px;
+    width: 128px;
+    text-align: center;
+  }
+  
+  .team-left h1{
+    color: white;
+    font: 24px Akkordeon;
+    font-size: 40px;
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    position: absolute;
+    top: -35px;
+    left: 449px;
+    width: 40px;
+    animation: fadein 0.5s;
+  }
+  
+  .team-right h2{
+    color: rgb(230, 36, 64);
+    font: 24px Akkordeon;
+    font-size: 80px;
+    position: absolute;
+    top: -79px;
+    left: 1315px;
+    width: 130px;
+    text-align: center;
+  }
+  
+  .team-right h1{
+    color: rgb(230, 36, 64);
+    font: 24px Akkordeon;
+    font-size: 40px;
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+    position: absolute;
+    top: -35px;
+    left: 1458px;
+    width: 32px;
+    animation: fadein 0.5s;
+  }
+  
+  .baron-timer{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 1650px;
+  }
+
+#slideshow {
+  position: absolute;
+  top: 825px;
+  left: 4px;
+  width: 315px;
+  height: 250px;
+}
+
+#slideshow > div { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+  
+  
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  @keyframes flip {
+    from { transform: rotateY(0deg);  }
+    to   { transform: rotateY(180deg);}
+  }

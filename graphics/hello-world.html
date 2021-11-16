@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<style>
-		#message {
-			font-size: 10em;
+<body>
+	<p>Test of Replicants:</p>
+
+	<style type="text/css">
+		.tg {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+	
+		.tg td {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+	
+		.tg th {
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			font-weight: normal;
+			overflow: hidden;
+			padding: 10px 5px;
+			word-break: normal;
+		}
+	
+		.tg .tg-0pky {
+			border-color: inherit;
+			text-align: left;
+			vertical-align: top
 		}
 	</style>
-</head>
-<body>
-	<div id="message"></div>
+	<table class="tg">
+		<thead>
+			<tr>
+				<th class="tg-0pky">Name</th>
+				<th class="tg-0pky">Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="tg-0pky">casternameL</td>
+				<td class="tg-0pky" id="casternameL"></td>
+			</tr>
+			<tr>
+				<td class="tg-0pky">casternameR</td>
+				<td class="tg-0pky" id="casternameR"></td>
+			</tr>
+			<tr>
+				<td class="tg-0pky">teamnameL</td>
+				<td class="tg-0pky" id="teamnameL"></td>
+			</tr>
+			<tr>
+				<td class="tg-0pky">teamnameR</td>
+				<td class="tg-0pky" id="teamnameR"></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 
 <script>
 	// We can access Replicants from other bundles by specifying the bundle name as a second parameter.
 	// NodeCG requires that bundle names match their directory names, but you can always check the `package.json` to double check.
-	const nameReplicant = nodecg.Replicant('name', 'eco-s-4-commons');
+	const nameReplicantL = nodecg.Replicant('casternameL', 'eco-s-4-commons');
+	const nameReplicantR = nodecg.Replicant('casternameR', 'eco-s-4-commons');
+	const teamReplicantL = nodecg.Replicant('teamnameL', 'eco-s-4-commons');
+	const teamReplicantR = nodecg.Replicant('teamnameR', 'eco-s-4-commons');
 
 	// Change will be called when the Replicant loads too, so we can use it to set the initial value.
-	nameReplicant.on('change', (newValue, oldValue) => {
-		message.innerText = `Hello, ${newValue}!`;
+	nameReplicantL.on('change', (newValue, oldValue) => {
+		casternameL.innerText = `${newValue}`;
+	});
+	nameReplicantR.on('change', (newValue, oldValue) => {
+		casternameR.innerText = `${newValue}`;
+	});
+	teamReplicantL.on('change', (newValue, oldValue) => {
+		teamnameL.innerText = `${newValue}`;
+	});
+	teamReplicantR.on('change', (newValue, oldValue) => {
+		teamnameR.innerText = `${newValue}`;
 	});
 </script>
 </html>

@@ -1,6 +1,6 @@
 {
   "name": "eco-s-4-commons",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ECO Season 4 Common Overlays",
   "homepage": "https://github.com/finncyr/eco-s-4-commons",
   "author": {
@@ -28,11 +28,18 @@
         "width": 2,
         "file": "panel.html",
         "headerColor": "#525F78"
+      },
+      {
+        "name": "ingamelol",
+        "title": "League of Legends",
+        "width": 3,
+        "file": "ingamelol.html",
+        "headerColor": "#525F78"
       }
     ],
     "graphics": [
       {
-        "file": "timer.html",
+        "file": "index.html",
         "width": 1920,
         "height": 1080
       },
